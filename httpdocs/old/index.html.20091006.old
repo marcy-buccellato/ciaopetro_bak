@@ -1,0 +1,30 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+    <meta name="verify-v1" content="vescUOcxAMaKKCwndl0EOfeVq+q4LvBULB81t59rsyw=" >
+    <title>Ciao Petro!</title>
+</head>
+<body>
+<div id="nav">
+           <!-- <a href="#"><img src="images/nav_home_on.png" width="119" border="0" name="home" id="home" /></a>
+            <a href="#"><img src="images/nav_photos_off.png" width="132" border="0" name="photos" id="photos" /></a>
+            <a href="#"><img src="images/nav_journal_off.png" width="128" border="0" name="journal" id="journal" /></a>
+            <a href="#"><img src="images/nav_audio_off.png" width="117" border="0" name="audio" id="audio" /></a> 
+            <a href="#"><img src="images/nav_cv_off.png" width="94" border="0" name="cv" id="cv" /></a>                        
+		-->
+        </div>
+      <div id="col_main"></div>
+<div id="container">
+	<div id="background"></div>
+    <div id="header">
+        <img id="icon" src="/images/logo.png">	
+  	</div>
+    <div id="content">
+        <div id="col_main_body">
+            Welcome to ciao-petro.com!        
+        </div>
+    </div>
+    <div id="footer"></div>
+</div>
+</body>
+</html>

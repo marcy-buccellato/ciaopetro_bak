@@ -1,0 +1,40 @@
+8
+
+dir
+2
+http://svn.triadsecurities.com/svn/ciao-petro/trunk/tests/library
+http://svn.triadsecurities.com/svn/ciao-petro
+
+
+
+2010-05-19T19:25:26.432234Z
+2
+marcy
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2e927299-ff47-4e45-8146-e5bea1a7066a
+
+bootstrap.php
+file
+
+
+
+
+2010-05-19T19:25:45.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2010-05-19T19:25:26.432234Z
+2
+marcy
+

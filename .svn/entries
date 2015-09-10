@@ -1,0 +1,76 @@
+8
+
+dir
+2
+http://svn.triadsecurities.com/svn/ciao-petro/trunk
+http://svn.triadsecurities.com/svn/ciao-petro
+
+
+
+2010-05-19T19:25:26.432234Z
+2
+marcy
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2e927299-ff47-4e45-8146-e5bea1a7066a
+
+tests
+dir
+
+application
+dir
+
+.zfproject.xml
+file
+
+
+
+
+2010-05-19T19:25:45.000000Z
+fd2fca37f6073eafa0c38a95e8e02ffa
+2010-05-19T19:25:26.432234Z
+2
+marcy
+
+library
+dir
+
+.project
+file
+
+
+
+
+2010-05-19T19:25:45.000000Z
+4105374b2084dc3cdf38e48e3d9546fa
+2010-05-19T19:25:26.432234Z
+2
+marcy
+
+.buildpath
+file
+
+
+
+
+2010-05-19T19:25:45.000000Z
+befe17b922a838b832e6267ec498b3d1
+2010-05-19T19:25:26.432234Z
+2
+marcy
+
+public
+dir
+

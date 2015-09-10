@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^([a-z\-]+)/([a-z\-]+)/([a-zA-Z0-9\.\-\_]+)$ index.php?section=$1&view=$2&p=$3
+RewriteRule ^([a-z\-]+)/([a-z\-]+)$ index.php?section=$1&view=$2
+RewriteRule ^([a-z]+)$ index.php?section=$1

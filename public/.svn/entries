@@ -1,0 +1,52 @@
+8
+
+dir
+2
+http://svn.triadsecurities.com/svn/ciao-petro/trunk/public
+http://svn.triadsecurities.com/svn/ciao-petro
+
+
+
+2010-05-19T19:25:26.432234Z
+2
+marcy
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2e927299-ff47-4e45-8146-e5bea1a7066a
+
+.htaccess
+file
+
+
+
+
+2010-05-19T19:25:45.000000Z
+0838f50db186cd7ed52b0ea6d7b846df
+2010-05-19T19:25:26.432234Z
+2
+marcy
+
+index.php
+file
+
+
+
+
+2010-05-19T19:25:45.000000Z
+32647710a2937d1eaac865642d9f6620
+2010-05-19T19:25:26.432234Z
+2
+marcy
+

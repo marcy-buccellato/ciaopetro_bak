@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+	
+	<!-- By VJKL vicky.lamburn@googlemail.com -->
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Sortables test for Worthing G-UK</title>
+	
+	<script type="text/javascript" src="/js/order/jquery.js"></script>
+	<script type="text/javascript" src="/js/order/interface.js"></script>
+	<script type="text/javascript" src="/js/order/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/order/vjkl.sortable.js"></script>
+
+<style type="text/css" media="all">
+body
+{
+	background: #fff;
+	height: 100%;
+	font-family: Calibri, 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	margin:0;
+}
+
+#top-header{
+height:140px;
+background: url(top-bar.png);
+}
+
+h1{
+font-weight:normal;
+font-size:48pt;
+color:white;
+margin:0;
+padding-top:0.4em;
+padding-left:16px;
+letter-spacing:-4px;
+}
+
+#top-header-subtitle{
+padding-left:16px;
+font-size:10pt;
+color:white;
+font-style:italic;
+}
+
+.sorthelper{
+border:2px dotted red;
+}
+.sortableitem
+{
+	cursor:move;
+	width: 300px;
+	
+	margin:10px 5px 10px 5px;
+	border:1px solid silver;
+	background-color:white;
+}
+
+.sortableitem h2{
+	margin:0;
+	padding:5px;
+	font-size:14pt;
+	background-color:#f5f5f5;
+}
+
+.sortableitem p{
+	margin:0;
+	padding:5px;
+}
+
+.gadgetClose{
+float:right;
+background:none;
+border:0;
+margin-top:3px;
+}
+
+#side-bar
+{
+	float:right;
+	width:330px;
+
+	background: url('sidebar-bg.png') top right repeat-y;
+}
+
+#siteWrapper{
+margin:10px 0px 10px 10px;
+}
+
+#add-gadget{
+clear:right;
+float:right;
+font-size:12pt;
+padding-bottom:10px;
+padding-right:25px;
+text-align:right;
+width:330px;
+background: url('sidebar-bg.png') top right repeat-y;
+}
+
+#add-gadget a{
+color:white;
+}
+
+.you-are-here{
+background: url('vista-bar.png') repeat-x;
+height:37px;
+color:white;
+line-height:37px;
+margin-bottom:0;
+padding-left:10px;
+}
+
+.clear-all{
+margin-top:1em;
+clear:both
+}
+</style>
+
+<style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+
+#firebugBody {
+    position: fixed;
+    top:0;
+    left:0;
+    margin:0;
+    padding:0;
+    width:1px;
+    height:1px;
+    overflow:visible;
+}
+
+.firebugCanvas {
+    position:fixed;
+    top: 0;
+    left: 0;
+    display:none;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+.firebugHighlight {
+    z-index: 2147483647;
+    position: absolute;
+    background-color: #3875d7;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0 none;
+}
+
+.firebugLayoutBoxParent {
+    z-index: 2147483647;
+    position: absolute;
+    background-color: transparent;
+    border-top: 0 none;
+    border-right: 1px dashed #BBBBBB;
+    border-bottom: 1px dashed #BBBBBB;
+    border-left: 0 none;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+.firebugRuler {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0 none;
+}
+
+.firebugRulerH {
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background: url(chrome://firebug/skin/rulerH.png) repeat-x;
+    border-top: 1px solid #BBBBBB;
+    border-right: 1px dashed #BBBBBB;
+    border-bottom: 1px solid #000000;
+}
+
+.firebugRulerV {
+    top: 0;
+    left: -15px;
+    width: 14px;
+    height: 100%;
+    background: url(chrome://firebug/skin/rulerV.png) repeat-y;
+    border-left: 1px solid #BBBBBB;
+    border-right: 1px solid #000000;
+    border-bottom: 1px dashed #BBBBBB;
+}
+
+.overflowRulerX > .firebugRulerV {
+    left: 0;
+}
+
+.overflowRulerY > .firebugRulerH {
+    top: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBox {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.firebugLayoutBoxOffset {
+    z-index: 2147483647;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.firebugLayoutBoxMargin {
+    background-color: #EDFF64;
+}
+
+.firebugLayoutBoxBorder {
+    background-color: #666666;
+}
+
+.firebugLayoutBoxPadding {
+    background-color: SlateBlue;
+}
+
+.firebugLayoutBoxContent {
+    background-color: SkyBlue;
+}
+
+/*.firebugHighlightGroup .firebugLayoutBox {
+    background-color: transparent;
+}
+
+.firebugHighlightBox {
+    background-color: Blue !important;
+}*/
+
+.firebugLayoutLine {
+    z-index: 2147483647;
+    background-color: #000000;
+    opacity: 0.4;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0 none;
+}
+
+.firebugLayoutLineLeft,
+.firebugLayoutLineRight {
+    position: fixed;
+    width: 1px;
+    height: 100%;
+}
+
+.firebugLayoutLineTop,
+.firebugLayoutLineBottom {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+}
+
+.firebugLayoutLineTop {
+    margin-top: -1px;
+    border-top: 1px solid #999999;
+}
+
+.firebugLayoutLineRight {
+    border-right: 1px solid #999999;
+}
+
+.firebugLayoutLineBottom {
+    border-bottom: 1px solid #999999;
+}
+
+.firebugLayoutLineLeft {
+    margin-left: -1px;
+    border-left: 1px solid #999999;
+}
+</style></head><body>
+
+<div id="top-header">
+<h1>Sortables Demo</h1>
+<div id="top-header-subtitle">Creating a sidebar and gadgets platform with jQuery</div>
+</div>
+<div id="sidebar-Marker" class="you-are-here"><strong>You are here:</strong> Home</div><div class="" id="side-bar"><div style="overflow: visible; -moz-user-select: none; position: static; display: block; opacity: 0.9999;" id="events" class="sortableitem"><h2 id="eventsHead"><button class="gadgetClose" onclick="$('#events').remove(); serial = $.SortSerialize('side-bar'); $.cookie('worthingGovUkSBar', serial.hash, { expires: 7 });"><img src="sortables_files/cross.png" title="Hide this gadget" alt="Hide"></button><img src="sortables_files/calendar_view_day.png" alt="Calendar Icon" align="left">&nbsp;Events in Worthing</h2>
+
+<p>Here is <a href="http://www.bbc.co.uk/" title="Visit the Beeb on-line">a link to the BBC</a></p></div><div style="overflow: visible; -moz-user-select: none; position: static; display: block; opacity: 0.9999;" id="news" class="sortableitem"><h2 id="newsHead"><button class="gadgetClose" onclick="$('#news').remove(); serial = $.SortSerialize('side-bar'); $.cookie('worthingGovUkSBar', serial.hash, { expires: 7 });"><img src="sortables_files/cross.png" title="Hide this gadget" alt="Hide"></button><img src="sortables_files/newspaper.png" alt="Newspaper Icon" align="left">&nbsp;News in Worthing&nbsp;</h2>
+
+<p>News jiffy</p>
+
+<ul><li>Beach clearance ongoing</li><li>New exhibition at art gallery</li><li>New website launched</li></ul></div><div style="overflow: visible; -moz-user-select: none; position: static; display: block; opacity: 0.9999;" id="refuse" class="sortableitem"><h2 id="refuseHead"><button class="gadgetClose" onclick="$('#refuse').remove(); serial = $.SortSerialize('side-bar'); $.cookie('worthingGovUkSBar', serial.hash, { expires: 7 });"><img src="sortables_files/cross.png" title="Hide this gadget" alt="Hide"></button><img src="sortables_files/bin.png" alt="Trash can" align="left">&nbsp;Refuse and Recycling Days</h2>
+
+<img src="sortables_files/trashfull.png" alt="Refuse Bin Icon" align="left;">
+
+<p>Here's some blurb about bins</p></div></div><div id="add-gadget"><a href="http://www.sunshinesista.plus.com/worthing_test/sortables_add.html">Add New Gadgets</a></div>
+
+<div id="siteWrapper">
+	<h2>What's this then?</h2>
+	<p>This is the area where a new side-bar element is going to get put if Javascript is enabled.</p>
+	<noscript><p><strong>You
+do not have Javascript enabled which is fine</strong>, we understand
+that, what I am trying to do is create a paragraph that wraps around
+your browser window to show that no space is reserved for the sidebar
+if Javascript is not enabled. Otherwise a user would be presented with
+a useless gap.</p></noscript>
+	<p>Code written and implemented by <a href="http://www.sunshinesista.plus.com/worthing_test/vicky.lamburn@googlemail.com" title="Send an e-mail to Vicky, she wrote this code you see">Vicky Lamburn</a>,
+you are free to modify this code as you see fit so long as some mention
+of the implementation is from me. I know this is a far from original
+concept in our Web 2.0 world.</p>
+	<p>Uses <a href="http://jquery.com/" title="Visit jQuery.com">jQuery</a>.</p>
+
+	<p class="clear-all">
+    		<a href="http://validator.w3.org/check?uri=referer"><img src="sortables_files/valid-xhtml10-blue.png" alt="Valid XHTML 1.0 Transitional" border="0" height="31" width="88"></a>
+	</p>
+</div>
+
+<div style="margin: 0px; overflow: hidden; position: absolute; display: none; cursor: move; list-style-type: none; list-style-image: none; list-style-position: outside; height: 141px; width: 302px; left: 1100px; top: 260px; opacity: 0.9999;" id="dragHelper"></div><div class="" style="margin: 10px 5px; display: none; width: 302px; height: 141px;" id="sortHelper">&nbsp;</div></body></html>
